@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 // import { FaUser } from "react-icons/fa";  //icon info => https://react-icons.github.io/react-icons/
 
 import MainPage from "./Main/MainPage"
@@ -54,9 +56,15 @@ function App() {
                 <span>예약하기</span>
                 </Link>
               </li>
-            </ul>
-          </nav>
-          <LoginPage />
+              <li>
+                <Button variant="outline-dark m-2 p-0 px-3" size="" className="b-button" style={{ borderRadius: '15px', borderWidth: '2px' }}>
+                  <Link to="/login" style={{ textDecoration: 'none' }}>
+                  <span>로그인</span>
+                  </Link>
+                </Button>
+              </li>              
+            </ul>            
+          </nav>          
         </header>
         
         <Routes>
@@ -66,6 +74,7 @@ function App() {
           <Route path="/map" element={<MapPage/>}/>
           <Route path="/announcement" element={<AnnouncementPage/>}/>
           <Route path="/reservation" element={<ReservationPage/>}/>
+          <Route path="/login" element={<LoginPage/>}/>
         </Routes>
       </div>
     </Router>

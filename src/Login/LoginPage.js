@@ -1,7 +1,8 @@
 function LoginPage() {
     return (
         <main className="login-page">
-            <button>로그인</button>
+            <p>아이디</p>
+            <p>비밀번호</p>
         </main>
     )
 }
